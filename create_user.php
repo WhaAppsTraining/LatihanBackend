@@ -11,7 +11,7 @@ function create_user($connection)
     $password = $_POST['password'];
     $table_name = "users";
 
-    $query = "INSERT INTO user (username, name, password)
+    $query = "INSERT INTO $table_name (username, name, password)
 VALUES (:username, :name, :password)";
     try {
         $stmt = $connection->prepare($query);
